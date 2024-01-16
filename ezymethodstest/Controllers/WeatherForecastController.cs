@@ -29,5 +29,16 @@ namespace ezymethodstest.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("{name}")]
+        public WeatherForecast GetByName(string name)
+        {
+            return new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(DateTime.Now),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = name
+            };
+        }
     }
 }
