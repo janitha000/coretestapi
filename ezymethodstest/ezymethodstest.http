@@ -1,0 +1,6 @@
+@ezymethodstest_HostAddress = http://localhost:5265
+
+GET {{ezymethodstest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
