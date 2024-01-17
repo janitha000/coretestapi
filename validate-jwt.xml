@@ -1,0 +1,24 @@
+<policies>
+    <inbound>
+        <base />
+        <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized. Access token is missing or invalid.">
+            <openid-config url="https://login.microsoftonline.com/e880d94d-07bb-4ec3-a035-9ff747fd445b/v2.0/.well-known/openid-configuration" />
+            <audiences>
+                <audience>api://049564f4-aee7-45ba-bc32-0ff3d651f8cc</audience>
+            </audiences>
+            <issuers>
+                <issuer>https://sts.windows.net/e880d94d-07bb-4ec3-a035-9ff747fd445b/</issuer>
+            </issuers>
+        </validate-jwt>
+        <set-backend-service id="apim-generated-policy" backend-id="WebApp_ezymethodtest" />
+    </inbound>
+    <backend>
+        <base />
+    </backend>
+    <outbound>
+        <base />
+    </outbound>
+    <on-error>
+        <base />
+    </on-error>
+</policies>
