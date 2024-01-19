@@ -37,7 +37,8 @@ namespace ezymethodstest.Controllers
             {
                 Date = DateOnly.FromDateTime(DateTime.Now),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = name
+                Summary = name,
+                SummaryTwo = "This is summary two"
             };
         }
 
