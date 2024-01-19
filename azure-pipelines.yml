@@ -33,5 +33,5 @@ steps:
     ConnectionType: 'AzureRM'
     appType: 'webApp'
     WebAppName: 'ezymethodtest'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/*.zip'
+    packageForLinux: '$(build.artifactStagingDirectory)/*.zip'
     ConnectedServiceName: 'Azure subscription 1(847bb4f3-b5de-4545-a5e2-0106fc370611)'
